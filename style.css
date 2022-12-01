@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+/* Selects the root element of the document:
+    :root represents the <html> element 
+    and is identical to the selector html, 
+    except that its specificity is higher.
+   :root can be useful for declaring global CSS variables:
+   */
+
 :root {
-  --line--border--fill: #3498db;
-  --line--border--empty: #e0e0e0;
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
 }
 
 * {
@@ -33,7 +40,7 @@ body {
 }
 .progress-container::before {
   content: "";
-  background-color: var(--line--border--empty);
+  background-color: var(--line-border-empty);
   position: absolute;
   top: 50%;
   left: 0;
@@ -44,7 +51,7 @@ body {
   transition: 0.4s ease;
 }
 .progress {
-  background-color: var(--line--border--fill);
+  background-color: var(--line-border-fill);
   position: absolute;
   top: 50%;
   left: 0;
@@ -63,14 +70,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--line--border--empty);
+  border: 3px solid var(--line-border-empty);
   transition: 0.4s ease;
 }
 .circle.active {
-  border-color: var(--line--border--fill);
+  border-color: var(--line-border-fill);
 }
 .btn {
-  background-color: var(--line--border--fill);
+  background-color: var(--line-border-fill);
   color: #fff;
   border: 0;
   border-radius: 6px;
@@ -87,6 +94,6 @@ body {
   outline: 0;
 }
 .btn:disabled {
-  background-color: var(--line--border--empty);
+  background-color: var(--line-border-empty);
   cursor: not-allowed;
 }
